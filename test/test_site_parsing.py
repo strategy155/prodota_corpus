@@ -7,9 +7,9 @@ URL = 'http://prodota.ru/forum'
 
 
 def get_source_code(url):
-    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.2a1pre) Gecko/20110324 Firefox/4.2a1pre'}
-    requests_object = requests.get(url, headers)
+    requests_object = requests.get(url)
     source_code = requests_object.text
+    print(requests_object.content)
     return source_code
 
 def get_html_structure(webpage_source_code):
