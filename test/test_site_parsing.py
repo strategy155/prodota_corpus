@@ -18,6 +18,12 @@ def get_soup(html_source_code):
     return soup
 
 
+def main():
+    source_code = get_source_code(URL)
+    soup = get_soup(source_code)
+    print(soup.prettify())
+
+
 if __name__ == '__main__':
     source_code = get_source_code(URL)
     get_html_structure(source_code)
