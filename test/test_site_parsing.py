@@ -25,5 +25,4 @@ def main():
 
 
 if __name__ == '__main__':
-    source_code = get_source_code(URL)
-    get_html_structure(source_code)
+    main()
