@@ -18,11 +18,6 @@ def get_soup(html_source_code):
     return soup
 
 
-def get_html_structure(webpage_source_code):
-    soup = bs4.BeautifulSoup(webpage_source_code, src.definitions.DEFAULT_PARSER)
-    print(soup.prettify())
-
-
 if __name__ == '__main__':
     source_code = get_source_code(URL)
     get_html_structure(source_code)
