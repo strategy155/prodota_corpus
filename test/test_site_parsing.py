@@ -4,6 +4,7 @@ import requests
 
 
 URL = 'http://prodota.ru/forum'
+LINK_TAG_NAME = "a"
 
 
 def get_source_code(url):
@@ -18,10 +19,16 @@ def get_soup(html_source_code):
     return soup
 
 
+def get_tags(tag_name, soup):
+    tags = soup.find_all(tag_name)
+    return tags
+
+
 def main():
     source_code = get_source_code(URL)
     soup = get_soup(source_code)
-    print(soup.prettify())
+    tags = get_tags(LINK_TAG_NAME, soup)
+    print(tags)
 
 
 if __name__ == '__main__':
