@@ -12,6 +12,12 @@ def get_source_code(url):
     print(requests_object.content)
     return source_code
 
+
+def get_soup(html_source_code):
+    soup = bs4.BeautifulSoup(html_source_code, src.definitions.DEFAULT_PARSER)
+    return soup
+
+
 def get_html_structure(webpage_source_code):
     soup = bs4.BeautifulSoup(webpage_source_code, src.definitions.DEFAULT_PARSER)
     print(soup.prettify())
